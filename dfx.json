@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "MannuBaveja_backend": {
+      "main": "src/MannuBaveja_backend/main.mo",
+      "type": "motoko"
+    },
+    "MannuBaveja_frontend": {
+      "dependencies": [
+        "MannuBaveja_backend"
+      ],
+      "source": [
+        "src/MannuBaveja_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "MannuBaveja_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
